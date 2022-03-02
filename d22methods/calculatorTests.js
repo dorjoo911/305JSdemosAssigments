@@ -7,7 +7,7 @@ const myExports = require("./calculator.js"); //with node need the name of your 
 const calculator = myExports.calculator; //do this for all of the functions used in the Mocha tests
 
 describe("test calculator with values 2, 3", function () {
-  calculator.setValues(2, 3); //values for the tests
+  calculator.getValues(2, 3); //values for the tests
 
   it("checks initial values 2 and 3", function () {
     assert.strictEqual(calculator.a, 2);
@@ -22,4 +22,3 @@ describe("test calculator with values 2, 3", function () {
     assert.strictEqual(calculator.mul(), 6);
   });
 });
-// https://github.com/KeithLevi/303Demos/tree/main/mochaTests/labW4D1
