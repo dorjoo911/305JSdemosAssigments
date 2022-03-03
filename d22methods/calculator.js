@@ -17,9 +17,9 @@ const calculator = {
     return res;
   },
 };
-calculator.getValues(5, 10);
-console.log("expect 15 : ", calculator.sum());
-console.log("expect 50 : ", calculator.mul());
+// calculator.getValues(2, 3);
+// console.log("expect 15 : ", calculator.sum());
+// console.log("expect 50 : ", calculator.mul());
 
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
 /* must be at end of file if are exporting an object so the export is after the definition */
