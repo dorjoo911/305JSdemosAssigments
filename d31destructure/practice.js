@@ -145,3 +145,74 @@
 //   },
 // };
 // console.log(user); // {name: "John", age: 30}
+
+// let user = {
+//   name: "John",
+//   age: 30,
+// };
+
+// let clone = {}; // the new empty object
+
+// // let's copy all user properties into it
+// for (let key in user) {
+//   clone[key] = user[key];
+// }
+
+// // now clone is a fully independent object with the same content
+// clone.name = "Pete"; // changed the data in it
+// // clone.age = 110;
+
+// console.log(clone.age); // still John in the original object
+
+// let user = {
+//   name: "John",
+//   age: 30,
+// };
+
+// let clone = Object.assign({}, user);
+
+// clone.name = "Bat";
+// console.log(clone.name);
+
+// let user = {
+//   name: "John",
+//   sizes: {
+//     height: 182,
+//     width: 50,
+//   },
+// };
+
+// // let clone = Object.assign({}, user);
+// let clone = _.cloneDeep(user);
+// alert(user.sizes === clone.sizes); // true, same object
+
+// // user and clone share sizes
+// user.sizes.width++; // change a property from one place
+// console.log(clone.sizes.width); // 51, see the result from the other one
+
+// console.log(clone[0] === user[0]);
+
+const arr1234 = [1, 2, 3, 4, 5];
+console.log(arr1234[0]);
+const [a, b, c, ...d] = arr1234;
+
+console.log(d); //4,5
+/*Write your own version of Array.map. Write a function, myMap(arr, fun) 
+that takes an array and a function as arguments and returns a new array 
+that is formed by applying the function to each element of the array and 
+saving 
+the result in the new array. Do not use the Array.map method in your code.
+*/
+const bar = [
+  { x: 1, y: 2 },
+  { x: 10, y: 4 },
+];
+function smash() {
+  let res = 0;
+  for (let { x, y } of bar) {
+    res += { x, y };
+  }
+  return res;
+  //   return bar.map(({ x, y }) => x + y);
+}
+console.log("expect [3, 14]:", smash(bar));

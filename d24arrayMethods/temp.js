@@ -145,7 +145,7 @@ function getAverageAge(players) {
   return avePoints;
 }
 // console.log("expect [1.33, 1, 1 ]: ", getAverageAge(players));
-//console.log("expect [{Bob:1.33, Andre:1, Max:1} ]: ", averagePoints (players));
+// console.log("expect [{Bob:1.33, Andre:1, Max:1} ]: ", averagePoints(players));
 
 // let array = [10, 20, 30, 40];
 // let returnVal = array.map(helper);
