@@ -1,17 +1,17 @@
 "use strict";
-/**
- *
- * @returns {number} product of even arguments
- */
-function multiplyEvens() {
-  let prod = 1;
-  for (const arg of arguments) {
-    if (arg % 2 === 0) {
-      prod *= arg;
-    }
-  }
-  return prod;
-}
+// /**
+//  *
+//  * @returns {number} product of even arguments
+//  */
+// function multiplyEvens() {
+//   let prod = 1;
+//   for (const arg of arguments) {
+//     if (arg % 2 === 0) {
+//       prod *= arg;
+//     }
+//   }
+//   return prod;
+// }
 // console.log("expect: 48 --> " + multiplyEvens(1, 6, 3, 4, 17, 2));
 
 // let a, b, c, d, e;
@@ -85,12 +85,12 @@ function multiplyEvens() {
 
 // sayHi(); // undefined
 
-let user = {
-  firstName: "Ilya",
-  sayHi() {
-    let arrow = () => console.log(this.firstName);
-    arrow();
-  },
-};
+// let user = {
+//   firstName: "Ilya",
+//   sayHi() {
+//     let arrow = () => console.log(this.firstName);
+//     arrow();
+//   },
+// };
 
-user.sayHi(); // Ilya
+// user.sayHi(); // Ilya
