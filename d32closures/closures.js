@@ -54,7 +54,32 @@ function makeArmy() {
   return shooters;
 }
 
-// let army = makeArmy();
+const bank = { transactionsDB: [] };
+bank.transactionsDB = [
+  { customerId: 1, customerTransactions: [10, 50, -40] },
+  { customerId: 2, customerTransactions: [10, 10, -10] },
+  { customerId: 3, customerTransactions: [5, -5, 55] },
+];
 
-// army[0](); // 0
-// army[5](); // 5
+bank.getBalance = function (id) {
+  const customer = bank.transactionsDB.find(
+    (customer) => customer.customerId === id
+  );
+  let balance = 0;
+  for (const trans of customer.customerTransactions) {
+    balance += trans;
+  }
+  return balance;
+};
+
+/** * @returns {number}  returns sum of all balances */
+bank.bankBalance = function () {
+  const totalBalance = bank.getBalance.call.recuce(
+    (sum, current) => sum + current,
+    0
+  );
+
+  return totalBalance;
+}.bind(bank);
+
+console.log(bankBalance());
