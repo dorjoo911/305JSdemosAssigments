@@ -15,13 +15,22 @@ function myMap(arr, func) {
 function myFilter(arr, func) {
   //   return arr.filter((number) => number % 2 === 0);
   //   return arr.filter((number) => number > 1);
-  // filter modify the array
-  return arr.filter((element) => func(element));
+  // return arr.filter((element) => func(element));
+  let res = [];
+  for (let e of arr) {
+    if (func(e)) {
+      res.push(e);
+    }
+  }
+  return res;
 }
 
 function myReduce(arr, func, initialValue) {
   //myReduce([1, 2, 3, 4], sum, 0), 10)
-  let sum = 0;
-  sum = arr.reduce((element, current) => func(element, current), initialValue);
+  let sum = initialValue;
+  // sum = arr.reduce((element, current) => func(element, current), initialValue);
+  for (let e of arr) {
+    sum = func(sum, e);
+  }
   return sum;
 }

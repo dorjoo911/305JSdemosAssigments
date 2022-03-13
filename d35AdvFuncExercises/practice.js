@@ -1,8 +1,15 @@
-let x = 10;
-function max() {
-  return (x = x + 1);
+function makeArmy() {
+  let shooters = [];
+  let i = 0;
+  while (i < 10) {
+    let shooter = function () {
+      console.log(i);
+    };
+    shooters.push(shooter);
+    i++;
+  }
+  return shooters;
 }
-console.log(max());
-console.log(max());
-x = 0;
-console.log("max() :>> ", max());
+let army = makeArmy();
+
+army[0]();
