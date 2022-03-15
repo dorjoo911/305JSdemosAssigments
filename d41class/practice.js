@@ -49,3 +49,28 @@
 // );
 
 // console.log("-----------------------------------------------");
+// class Counter {
+//   constructor() {
+//     this._count = 0;
+//   }
+//   up() {
+//     return ++this._count;
+//   }
+//   down() {
+//     return --this._count;
+//   }
+// }
+
+// let counter = new Counter();
+
+// console.log(counter.up());
+// console.log(counter.up());
+// console.log(counter.down());
+
+function chooseRandomPerson() {
+  let randomPerson = Math.floor(Math.random() * 10);
+  if (randomPerson > 4) {
+    console.log(randomPerson);
+  }
+}
+chooseRandomPerson();
